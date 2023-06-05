@@ -2,5 +2,12 @@
     <string name="app_name">TODO App</string>
 
     <string name="todo_title">Bienvenido, José</string>
-    <string name="todo_categories">Categorías</string>
+    <string name="todo_categories">Categorías:</string>
+    <string name="todo_tasks">Tareas:</string>
+
+    <string name="todo_dialog_add_task">Añade la tarea</string>
+    <string name="todo_dialog_category_business">Negocios</string>
+    <string name="todo_dialog_category_other">Otros</string>
+    <string name="todo_dialog_category_personal">Personal</string>
+    <string name="todo_dialog_add_task_button">Crear tarea</string>
 </resources>
