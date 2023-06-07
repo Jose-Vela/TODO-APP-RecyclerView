@@ -1,6 +1,5 @@
 package com.example.todoapp
 
-import android.content.Context
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
