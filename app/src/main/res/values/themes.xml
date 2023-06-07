@@ -7,4 +7,10 @@
     </style>
 
     <style name="Theme.TODOApp" parent="Base.Theme.TODOApp" />
+
+    <style name="TodoSubtitle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/todo_subtitle_text</item>
+        <item name="android:layout_marginHorizontal">32dp</item>
+    </style>
 </resources>

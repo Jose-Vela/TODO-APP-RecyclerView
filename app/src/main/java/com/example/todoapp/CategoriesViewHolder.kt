@@ -1,6 +1,5 @@
 package com.example.todoapp
 
-import android.content.Context
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -10,18 +9,18 @@ class CategoriesViewHolder(view: View):  RecyclerView.ViewHolder(view){
     private val tvCategoryName: TextView = view.findViewById(R.id.tvCategoryName)
     private val divider: View = view.findViewById(R.id.divider)
 
-    fun render(taskCategory: TaskCategory, currentContext: Context){
+    fun render(taskCategory: TaskCategory){
         when(taskCategory){
             TaskCategory.Business -> {
-                tvCategoryName.text = currentContext.getString(R.string.todo_dialog_category_business)
+                tvCategoryName.text = tvCategoryName.context.getString(R.string.todo_dialog_category_business)
                 divider.setBackgroundColor(ContextCompat.getColor(divider.context, R.color.todo_business_category))
             }
             TaskCategory.Other -> {
-                tvCategoryName.text = currentContext.getString(R.string.todo_dialog_category_other)
+                tvCategoryName.text = tvCategoryName.context.getString(R.string.todo_dialog_category_other)
                 divider.setBackgroundColor(ContextCompat.getColor(divider.context, R.color.todo_other_category))
             }
             TaskCategory.Personal -> {
-                tvCategoryName.text = currentContext.getString(R.string.todo_dialog_category_personal)
+                tvCategoryName.text = tvCategoryName.context.getString(R.string.todo_dialog_category_personal)
                 divider.setBackgroundColor(ContextCompat.getColor(divider.context, R.color.todo_personal_category))
             }
         }
