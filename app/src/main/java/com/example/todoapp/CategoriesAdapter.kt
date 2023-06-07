@@ -5,9 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class CategoriesAdapter(context: Context, private val categories: List<TaskCategory>) :
+class CategoriesAdapter(private val categories: List<TaskCategory>) :
     RecyclerView.Adapter<CategoriesViewHolder>() {
-    private var currentContext: Context = context
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
         /*Este metodo crea una vista para "montarla" en pantalla, para que posteriormente el método
         onBindViewHolder() pueda pasarle la información que tiene que "pintar".*/
@@ -18,6 +17,6 @@ class CategoriesAdapter(context: Context, private val categories: List<TaskCateg
     override fun getItemCount() = categories.size   // Este metodo retorna el tamaño del listado de las categorías
 
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
-        holder.render(categories[position], currentContext)
+        holder.render(categories[position])
     }
 }

@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-        categoriesAdapter = CategoriesAdapter(this, categories)
+        categoriesAdapter = CategoriesAdapter(categories)
         rvCategories.layoutManager = LinearLayoutManager(
             this,
             LinearLayoutManager.HORIZONTAL,
