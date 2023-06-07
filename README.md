@@ -4,6 +4,7 @@ Proyecto de una App TODO para organizar tareas por categorias, utlizando Recycle
 # Tecnologías Utilizadas
 - Kotlin
 - Sealed Class
+- Data Class
 - Diseño basado en XML
   - Recycler View
   - Linear Layout
