@@ -88,10 +88,15 @@ class MainActivity : AppCompatActivity() {
         )   // Define la orientación del RecyclerView
         rvCategories.adapter = categoriesAdapter
 
-        tasksAdapter = TasksAdapter(tasks)
+        tasksAdapter = TasksAdapter(tasks) { position -> onItemSelected(position) }     // { position -> onItemSelected(position) }, Indica que es una funcion Lambda
         rvTasks.layoutManager =
             LinearLayoutManager(this)    // Si lo queremos en VERTICAL, no es necesario colocarlo, ya que es el valor por defecto
         rvTasks.adapter = tasksAdapter
+    }
+
+    private fun onItemSelected(position:Int){
+        tasks[position].isSelected = !tasks[position].isSelected
+        updateTasks()
     }
 
     private fun updateTasks() {

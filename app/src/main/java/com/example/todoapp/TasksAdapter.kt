@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class TasksAdapter(private val tasks: List<Task>) :
+class TasksAdapter(private val tasks: List<Task>, private val onTaskSelected: (Int) -> Unit) : // onTaskSelected: (int) -> Unit, es una función lambda
     RecyclerView.Adapter<TasksViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TasksViewHolder {
         /*Este metodo crea una vista para "montarla" en pantalla, para que posteriormente el método
@@ -17,5 +17,6 @@ class TasksAdapter(private val tasks: List<Task>) :
 
     override fun onBindViewHolder(holder: TasksViewHolder, position: Int) {
         holder.render(tasks[position])
+        holder.itemView.setOnClickListener { onTaskSelected(position) }
     }
 }
