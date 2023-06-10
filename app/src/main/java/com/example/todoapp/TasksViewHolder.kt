@@ -2,7 +2,6 @@ package com.example.todoapp
 
 import android.content.res.ColorStateList
 import android.graphics.Paint
-import android.util.Log
 import android.view.View
 import android.widget.CheckBox
 import android.widget.TextView
