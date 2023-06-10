@@ -20,11 +20,13 @@ class MainActivity : AppCompatActivity() {
         Other
     )
 
-    private val tasks = mutableListOf(
+    private val tasks = mutableListOf<Task>()
+
+    /*private val tasks = mutableListOf(
         Task("PruebaBusiness", Business),
         Task("PruebaPersonal", Personal),
         Task("PruebaOther", Other)
-    )
+    )*/
 
     private lateinit var rvCategories: RecyclerView
     private lateinit var categoriesAdapter: CategoriesAdapter
@@ -100,11 +102,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateCategories(position: Int){
-        //categories[position].isSelected = !categories[position].isSelected
-        //categoriesAdapter.notifyItemChanged(position)
+        categories[position].isSelected = !categories[position].isSelected
+        categoriesAdapter.notifyItemChanged(position)
+        updateTasks()
     }
 
     private fun updateTasks() {
+        val selectedCategories: List<TaskCategory> = categories.filter { it.isSelected }
+        val newTasks = tasks.filter { selectedCategories.contains(it.category) }
+        tasksAdapter.tasks = newTasks
         tasksAdapter.notifyDataSetChanged()
     }
 }
