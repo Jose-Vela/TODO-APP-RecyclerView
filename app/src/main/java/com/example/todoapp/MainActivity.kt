@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-        categoriesAdapter = CategoriesAdapter(categories)
+        categoriesAdapter = CategoriesAdapter(categories) { position -> updateCategories(position) }
         rvCategories.layoutManager = LinearLayoutManager(
             this,
             LinearLayoutManager.HORIZONTAL,
@@ -96,7 +96,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun onItemSelected(position:Int){
         tasks[position].isSelected = !tasks[position].isSelected
-        updateTasks()
+        tasksAdapter.notifyItemChanged(position)
+    }
+
+    private fun updateCategories(position: Int){
+        //categories[position].isSelected = !categories[position].isSelected
+        //categoriesAdapter.notifyItemChanged(position)
     }
 
     private fun updateTasks() {
