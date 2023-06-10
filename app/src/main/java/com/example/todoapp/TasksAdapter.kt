@@ -16,7 +16,10 @@ class TasksAdapter(private val tasks: List<Task>, private val onTaskSelected: (I
     override fun getItemCount() = tasks.size
 
     override fun onBindViewHolder(holder: TasksViewHolder, position: Int) {
-        holder.render(tasks[position])
-        holder.itemView.setOnClickListener { onTaskSelected(position) }
+        /* En este caso enviamos la función Lambda por parametro a la función render().
+         OJO: Se envia la función onTaskSelected sin los parentesis (),
+         ya que de esta manera solo se envía, si colocamos los parentesis, es decir; onItemSelected(),
+         esta se ejecutaría   */
+        holder.render(tasks[position], onTaskSelected)
     }
 }
