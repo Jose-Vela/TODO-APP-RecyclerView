@@ -38,21 +38,11 @@ Para esto basta con presionar sobre la categoría deseada:
 - **"Activada":** Se mostrará de un color en tonalidad **<span style="color: rgba(8,26,74,1)">azul marino</span>**  y automáticamente se **muestran** las tareas pertenecientes a esta categoría.
 - **"Desactivada"**: Se mostrará de un color en tonalidad **<span style="color:#787878">gris</span>** y automáticamente se **ocultan** las tareas pertenecientes a esta categoría.<br>
 
-<style>
-  .contenedor-imagenes {
-    display: flex;
-    justify-content: center
-  }
 
-  .contenedor-imagenes img:first-child {
-    margin-right: 60px;
-  }
-</style>
-
-<div class="contenedor-imagenes">
-      <img width="20%" src="https://i.postimg.cc/ydVj4jB3/Screenshot-4.png">
+<p align="center">
+      <img style="margin-right:60px" width="20%" src="https://i.postimg.cc/ydVj4jB3/Screenshot-4.png">
       <img width="20%" src="https://i.postimg.cc/63Y09Z5j/Screenshot-5.png">
-  </div>
+  </p>
 
 **Nota:** El valor por defecto de las categorías al iniciar la aplicación,  es **"Activada"**, mostrando todas las tareas existentes.
 
